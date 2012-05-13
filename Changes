@@ -1,0 +1,8 @@
+Revision history for Padre-Plugin-Cookbook
+
+0.23  2013.05.13
+    - consolidate to common version in to 0.23
+    - move tests around
+    - add POSIX dependency stkowski++
+    
+0-0.22 yes I know it's not here, if you need to see use Padre trac Browser :)
