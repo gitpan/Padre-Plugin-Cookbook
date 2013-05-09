@@ -4,6 +4,7 @@ author:
   - 'Kevin Dawson <bowtie@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
+  Test::More: 0.98
 configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module
@@ -16,20 +17,27 @@ meta-spec:
 name: Padre-Plugin-Cookbook
 no_index:
   directory:
+    - fbp
     - inc
     - share
     - t
     - xt
+recommends:
+  Test::Pod: 1.48
+  Test::Pod::Coverage: 1.08
 requires:
-  Data::Printer: 0.3
-  Moose: 2.06
-  POSIX: 1.17
+  Carp: 1.26
+  Data::Dumper: 2.145
+  Data::Printer: 0.35
+  Moose: 2.0802
   Padre: 0.96
+  constant: 1.27
   namespace::autoclean: 0.13
+  parent: 0.225
   perl: 5.10.1
 resources:
   bugtracker: http://padre.perlide.org/trac
   homepage: http://padre.perlide.org/trac/wiki/PadrePluginDialog
   license: http://dev.perl.org/licenses/
   repository: http://svn.perlide.org/padre/trunk/Padre-Plugin-Cookbook/
-version: 0.23
+version: 0.24

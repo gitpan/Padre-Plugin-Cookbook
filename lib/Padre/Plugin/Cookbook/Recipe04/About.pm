@@ -9,7 +9,7 @@ use warnings;
 # use autodie;
 
 # Version required
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 use parent qw( Padre::Plugin::Cookbook::Recipe04::FBP::AboutFB );
 
 use Data::Dumper ();
@@ -74,7 +74,7 @@ sub licence_clicked {
 	$output->clear;
 
 	my $licence = <<'END_LICENCE';
-LICENSE & COPYRIGHT 
+LICENSE & COPYRIGHT
 
 Copyright 2008-2011 The Padre development team as listed in Padre.pm.
 
@@ -83,12 +83,13 @@ the same terms as the Perl 5 programming language system itself.
 
 Terms of the Perl programming language system itself
 
- a) the GNU General Public License as published by the Free
-    Software Foundation; either version 1, or (at your option) any
-    later version, or
- b) the "Artistic License"
+	a) the GNU General Public License as published by the Free
+		Software Foundation; either version 1, or (at your option) any later
+		version, or
+	b) the "Artistic License"
 
-The full text of the license can be found in the LICENSE file included with this module.
+The full text of the license can be found in the LICENSE file included with
+this module.
 
 END_LICENCE
 
@@ -101,13 +102,17 @@ END_LICENCE
 
 __END__
 
+=pod
+
+=encoding utf8
+
 =head1 NAME
 
 Padre::Plugin::Cookbook::Recipe04::About
 
 =head1 VERSION
 
-This document describes Padre::Plugin::Cookbook::Recipe04::About version 0.23
+version: 0.24
 
 =head1 DESCRIPTION
 
@@ -147,7 +152,7 @@ BOWTIE E<lt>kevin.dawson@btclick.comE<gt>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2008-2012 The Padre development team as listed in Padre.pm.
+Copyright (c) 2008-2013 The Padre development team as listed in Padre.pm.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.

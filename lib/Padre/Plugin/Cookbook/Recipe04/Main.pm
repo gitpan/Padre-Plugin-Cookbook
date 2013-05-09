@@ -3,7 +3,7 @@ package Padre::Plugin::Cookbook::Recipe04::Main;
 use v5.10.1;
 use strict;
 use warnings;
-
+no if $] > 5.017010, warnings => 'experimental';
 # Avoids regex performance penalty
 use English qw( -no_match_vars );
 
@@ -11,7 +11,7 @@ use Padre::Logger;
 use Padre::Wx             ();
 use Padre::Wx::Role::Main ();
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 use Moose;
 use namespace::autoclean;
@@ -719,17 +719,16 @@ sub help_menu_clicked {
 	my $licence = <<'MENU_HELP';
 	Info for Recipe-04 viewer.
 
-1,	Pick a relation and click UPDATE to view it's contents, only the
-	first 127 tuples will be displayed, then you can use some of the other features.
-2,	MEDIUM SEA GREEN for an old school look.
-3,	Use SHOW to peek inside after first Updating;
-	tip start with Syntax Highlight,
-	all of Shows output goes to terminal, using Data::Printer
-	tip set your terminal to white on black
-4,	CLEAN works with History, Session, Session Files & LastPositionInFile
-5,	Clicking on Session tuple displays it's children in terminal.
-6,	you can sort on any attribute heading excluding index.
-7,	Adjust Width is a toggle: have fun
+1, Pick a relation and click UPDATE to view it's contents, only the first
+ 127 tuples will be displayed, then you can use some of the other features.
+2, MEDIUM SEA GREEN for an old school look.
+3, Use SHOW to peek inside after first Updating; tip start with Syntax
+ Highlight, all of Shows output goes to terminal, using Data::Printer tip set
+ your terminal to white on black
+4, CLEAN works with History, Session, Session Files & LastPositionInFile
+5, Clicking on Session tuple displays it's children in terminal.
+6, You can sort on any attribute heading excluding index.
+7, Adjust Width is a toggle: have fun
 
 ps outputs go-to terminal, Padre-Sataus_Bar and Padre-Output.
 
@@ -816,13 +815,17 @@ no Moose;
 
 __END__
 
+=pod
+
+=encoding utf8
+
 =head1 NAME
 
 Padre::Plugin::Cookbook::Recipe04::Main
 
 =head1 VERSION
 
-This document describes Padre::Plugin::Cookbook::Recipe04::Main version 0.23
+version: 0.24
 
 =head1 DESCRIPTION
 
@@ -925,7 +928,7 @@ BOWTIE E<lt>kevin.dawson@btclick.comE<gt>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2008-2012 The Padre development team as listed in Padre.pm.
+Copyright (c) 2008-2013 The Padre development team as listed in Padre.pm.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
